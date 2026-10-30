@@ -1,0 +1,402 @@
+
+/* Default Styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body */
+body {
+    background-color: #DEE2E6;
+    font-family: Arial, sans-serif;
+    color: #212529;
+}
+
+/* Navigation Bar */
+
+/* Navbar */
+.navbar {
+    background-color: #212529;
+    color: white;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 15px 30px;
+    position: relative;
+}
+
+.logo {
+    font-size: 25px;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 30px;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+/* Hide Checkbox */
+#menu-toggle {
+    display: none;
+}
+
+/* Hamburger Icon */
+.menu-icon {
+    display: none;
+    font-size: 28px;
+    cursor: pointer;
+    color: white;
+}
+
+/* Mobile Responsive */
+@media screen and (max-width: 600px) {
+
+    .navbar {
+        justify-content: space-between;
+    }
+
+    .menu-icon {
+        display: block;
+    }
+
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background-color: #212529;
+        padding: 20px;
+        gap: 20px;
+    }
+
+    #menu-toggle:checked ~ .nav-links {
+        display: flex;
+    }
+}
+
+
+/* Home Section */
+.home {
+    min-height: 350px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 30px;
+}
+
+/* Home Content */
+.home-content h1 {
+    font-size: 38px;
+}
+
+.home-content p {
+    font-size: 14px;
+    margin-top: 5px;
+}
+
+/* Profile Image */
+.profile-img {
+    width: 250px;
+    height: auto;
+    object-fit: contain;
+}
+
+/* Hire Me Button */
+.home-content button {
+    background-color: #212529;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 14px;
+    cursor: pointer;
+    margin-top: 15px;
+    transition: 0.3s;
+}
+
+/* Hover Effect */
+.home-content button:hover {
+    background-color: #495057;
+    transform: translateY(-2px);
+}
+
+/* About Section */
+.about-section {
+    min-height: 350px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 40px;
+    gap: 50px;
+}
+
+/* About Heading */
+.about-heading h1 {
+    font-size: 38px;
+}
+
+
+/* About Content */
+.about-content {
+    width: 350px;
+}
+
+.about-content p {
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+/* About Buttons */
+.about-buttons {
+    display: flex;
+    gap: 12px;
+    margin-top: 20px;
+}
+
+.btn {
+    background-color: #212529;
+    color: white;
+    padding: 9px 15px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 13px;
+}
+
+.btn-outline {
+    background-color: transparent;
+    color: #212529;
+    border: 1px solid #212529;
+}
+.btn-outline :hover {
+     opacity: 0.8;
+    background-color: #212529;
+    color: white;
+}
+
+
+.btn:hover {
+    opacity: 0.8;
+    background-color: #212529;
+     color: white;
+}
+
+/* Services Section */
+.services-section {
+    min-height: 350px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 20px;
+}
+
+/* Services Heading */
+.services-section h1 {
+    font-size: 38px;
+    margin-bottom: 25px;
+}
+
+/* Cards Container */
+.services-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+/* Service Cards */
+.service-card {
+    background-color: #212529;
+    color: white;
+    width: 200px;
+    min-height: 150px;
+    padding: 20px;
+    border-radius: 6px;
+    box-shadow: 3px 4px 8px gray;
+    text-align: left;
+    transition: 0.3s;
+}
+
+/* Card Heading */
+.service-card h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+/* Card Paragraph */
+.service-card p {
+    font-size: 13px;
+    line-height: 1.4;
+}
+
+/* Hover Effect */
+.service-card:hover {
+    transform: translateY(-5px);
+}
+
+/* Contact Section */
+.contact-section {
+    min-height: 350px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 35px 20px;
+}
+
+.contact-section h1 {
+    font-size: 38px;
+    margin-bottom: 30px;
+}
+
+/* Contact Form */
+.contact-form {
+    width: 400px;
+}
+
+.contact-form h3 {
+    font-size: 16px;
+    margin-bottom: 12px;
+}
+
+.input-row {
+    display: flex;
+    gap: 8px;
+}
+
+.contact-form input {
+    width: 50%;
+    padding: 9px;
+    background-color: #212529;
+    color: white;
+    border: none;
+    border-radius: 5px;
+}
+
+.contact-form textarea {
+    width: 100%;
+    height: 100px;
+    margin-top: 8px;
+    padding: 10px;
+    background-color: #212529;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    resize: none;
+}
+
+.contact-form input::placeholder,
+.contact-form textarea::placeholder {
+    color: white;
+}
+
+.contact-form button {
+    margin-top: 10px;
+    padding: 9px 18px;
+    background-color: white;
+    color: #212529;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.contact-form button:hover {
+    background-color: #212529;
+    color: white;
+     opacity: 0.8;
+}
+
+/* Responsive Design */
+
+/* Tablets */
+@media screen and (max-width: 768px) {
+
+    nav {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    nav ul {
+        gap: 15px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .home {
+        flex-direction: column;
+        gap: 25px;
+        text-align: center;
+    }
+
+    .profile-img {
+        width: 200px;
+    }
+
+    .about-section {
+        flex-direction: column;
+        text-align: center;
+        gap: 25px;
+    }
+
+    .about-content {
+        width: 100%;
+        max-width: 350px;
+    }
+
+    .about-buttons {
+        justify-content: center;
+    }
+
+    .services-container {
+        flex-wrap: wrap;
+    }
+}
+
+/* Mobile Phones */
+@media screen and (max-width: 480px) {
+
+    nav ul {
+        gap: 10px;
+    }
+
+    nav ul li a {
+        font-size: 12px;
+    }
+
+    .home-content h1,
+    .about-heading h1,
+    .services-section h1,
+    .contact-section h1 {
+        font-size: 30px;
+    }
+
+    .profile-img {
+        width: 170px;
+    }
+
+    .service-card {
+        width: 100%;
+        max-width: 280px;
+    }
+
+    .contact-form {
+        width: 100%;
+        max-width: 350px;
+    }
+
+    .input-row {
+        flex-direction: column;
+    }
+
+    .contact-form input {
+        width: 100%;
+    }
+}
